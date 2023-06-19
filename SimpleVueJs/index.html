@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,27 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     <title>Vue Js </title>
 </head>
+
 <body>
 
-<div id="new_view">
-    <h1 style="color:royalblue;">{{name}}</h1>
-    <form action="">
-        <input type="text" v-model="name">
-    </form>
-</div>
-    
-<script src="app.js"></script>
+    <div id="new_view" style="padding: 10px;">
+        <h1 style="color:royalblue;">{{name}}</h1>
+        <form action="">
+            <input type="text" v-model="name">
+        </form>
+    </div>
+
+    <div id="age" style="border-top: 1px solid black;padding: 10px;">
+        <button v-on:click="add(1)">Add age by 1 year </button>
+        <button v-on:click="subtract(1)">Subtract age by 1 year</button>
+        <button v-on:dblclick="add(10)">Add age by 10 year </button>
+        <button v-on:dblclick="subtract(10)">Subtract age by 10 year</button>
+        <p>Your age is:{{age}}</p>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="event.js"></script>
 </body>
 
 </html>
